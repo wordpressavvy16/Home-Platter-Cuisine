@@ -1,0 +1,2 @@
+### 1.0 Introduction
+This document provides the technical blueprint for the Home Platter platform. It details the evolution from the current single-provider proof-of-concept application to the target state: a secure, scalable, multitenant, and AI-native global SaaS marketplace, as defined in the Product Requirements Document (PRD v3.0).

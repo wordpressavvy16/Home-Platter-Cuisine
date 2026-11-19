@@ -1,0 +1,66 @@
+# GitHub Actions CI/CD Pipeline for Home Platter
+
+name: Home Platter CI/CD
+
+# Controls when the action will run. 
+# Triggers the workflow on push events but only for the main branch.
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  # This job runs linting checks on the codebase
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'
+    - name: 'SIMULATE: Run ESLint'
+      run: echo ">>> This step would run linting checks on the codebase (e.g., npx eslint . --ext .ts,.tsx)"
+
+  # This job runs tests on the codebase
+  test:
+    runs-on: ubuntu-latest
+    needs: lint # This job depends on the lint job completing successfully
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'
+    - name: 'SIMULATE: Run Unit & Integration Tests'
+      run: echo ">>> This step would run the test suite (e.g., npx vitest run)"
+
+  # This job builds and pushes the Docker image to a container registry
+  build-and-push:
+    runs-on: ubuntu-latest
+    needs: test # This job depends on the test job completing successfully
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v2
+
+    - name: 'SIMULATE: Log in to Docker Hub'
+      # In a real project, you would use encrypted secrets for username and password.
+      # uses: docker/login-action@v2
+      # with:
+      #   username: ${{ secrets.DOCKERHUB_USERNAME }}
+      #   password: ${{ secrets.DOCKERHUB_TOKEN }}
+      run: echo ">>> This step would log in to a container registry like Docker Hub or GCR."
+
+    - name: 'SIMULATE: Build and push Docker image'
+      # This step uses the Dockerfile from Story 14.1 to build the image.
+      # The image would be tagged with a unique identifier, like the Git SHA.
+      # uses: docker/build-push-action@v4
+      # with:
+      #   context: .
+      #   file: ./Dockerfile
+      #   push: true
+      #   tags: yourdockerhubusername/home-platter:latest,yourdockerhubusername/home-platter:${{ github.sha }}
+      run: echo ">>> This step would build the image from our Dockerfile and push it to the registry."

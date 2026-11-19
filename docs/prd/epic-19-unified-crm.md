@@ -1,0 +1,10 @@
+### Epic 19: The Unified CRM Hub
+
+**Goal:** To significantly reduce workflow friction for Providers and Super Admins by evolving the current function-centric dashboard into a modern, entity-centric "Unified CRM Hub." This hub will centralize all information and actions related to a specific customer into a single, comprehensive 360-degree view, minimizing context switching and improving operational efficiency.
+
+---
+
+-   **Story 19.1 (Provider 360-Degree Customer View):** As a Provider, when I click on a customer in my CRM, I want to see a unified view that consolidates their entire history with my kitchen—including all past orders, reviews they've left, and our direct message history—so I can have a complete understanding of our relationship in one place. (Done)
+-   **Story 19.2 (Provider Contextual CRM Actions):** As a Provider, while viewing a customer's 360-degree profile, I want to perform contextual actions directly from that view (e.g., "Send Reward Coupon," "Send Review Reminder" next to an un-reviewed order), so that I can manage the customer relationship without navigating to different dashboard panels. (Done)
+-   **Story 19.3 (Super Admin Master 360-Degree View):** As a Super Admin, when I click on any user in the Master CRM, I want to see a powerful 360-degree view that shows their complete platform history, including all orders placed with any provider, so I have a holistic view for support and governance. (Done)
+-   **Story 19.4 (Super Admin Contextual Governance Actions):** As a Super Admin, while viewing a user's master profile, I want to see all their associated support tickets and order disputes, and be able to take direct administrative action (e.g., "Issue Compensation Coupon," "Reply to Ticket"), so I can resolve issues efficiently without cross-referencing multiple panels. (Done)

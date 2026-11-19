@@ -1,0 +1,20 @@
+{
+  "short_name": "Home Platter",
+  "name": "Home Platter - Homemade Meal Service",
+  "icons": [
+    {
+      "src": "https://via.placeholder.com/192",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://via.placeholder.com/512",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#FDFBF5",
+  "background_color": "#FDFBF5"
+}

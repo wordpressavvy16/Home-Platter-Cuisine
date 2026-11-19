@@ -1,0 +1,9 @@
+{
+  "name": "Copy of Home Platter - Homemade Meal Service 1 st Nov'25",
+  "description": "A Zomato/Swiggy clone for discovering and ordering from local home-based tiffin and meal services. Find delicious, authentic homemade food right in your neighborhood.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "prompt": "",
+  "majorCapabilities": []
+}
